@@ -6,8 +6,26 @@ include_once COMMON.'class.common.video.inc';
 ?>
 
 <div class="panel panel-default"> <?php //1st div >  ?>
+	
+
+	<div class="container">
+			<div class="well well-sm">
+      <!-- Portfolio Item Heading -->
+      <h7 class="my-4">Video Viewer
+        <small>-Khulna University</small>
+      </h7>
+  </div>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+         
+
+         <!-- <img class="img-fluid" src="http://placehold.it/750x500" alt="">  -->
+        
 				
-	 <div class="panel-heading">Video Tutorial Viewer</div>  <?php // 2nd div >  ?>
+	<!-- <div class="panel-heading">Video Tutorial Viewer</div>  <?php // 2nd div >  ?> -->
 
 	 			
 	 <div  style="overflow: auto;padding: -100px 100px;  >  <?php //3rd div >  ?>
@@ -24,12 +42,12 @@ include_once COMMON.'class.common.video.inc';
 				if($Result1->getIsSuccess()){ // 1st if start 
 				$Vedio = $Result1->getResultObject();
 			?> 
-			<div>
-              	<label class="control-label"><?php echo $Vedio->getTitle(); ?></label>
+			<div class= "well well-sm" >
+              	<h5 ><?php echo "Video Title : ".$Vedio->getTitle(); ?></h5>
 			</div>
 			<div>
 				<?php
-					$front = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' ;
+					$front = '<iframe width="750" height="500" src="https://www.youtube.com/embed/' ;
 					$back = '" frameborder="0" allowfullscreen></iframe>';
 					$link = $Vedio->getLink();
 					//$link2= substr($link);
@@ -44,23 +62,65 @@ include_once COMMON.'class.common.video.inc';
 				}
 			?>
 		</br>
-					playlist 
-				<div style ="padding: 25px 0px;"> <!--Playlist--->
+				</div>
+			</div>
+
+			<!--playlis div start-->
+				<div class="col-md-4" style = "max-width: 500px;height:500px;position: relative;">
+					<div class="well well-sm" style ="max-width: 600px;height:50px;" >
+          	<h7 class="my-3" >Playlist </h7>
+          			 </div>
+          		<div class="col-md-4" style = "min-width: 500px ; max-width : 500px;height:500px;position: relative; overflow-x: hidden">	 
+
+          		 <ul>	 	
+          			 		
+            <iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				
+				 
+            <iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				
+					
+            <iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
 					<iframe width="144" height="100"
 						src="https://www.youtube.com/embed/tgbNymZ7vqY">
 					</iframe>
-				</div> <!--End of pLaylist ---> 
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				<iframe width="144" height="100"
+						src="https://www.youtube.com/embed/tgbNymZ7vqY">
+					</iframe>
+				
+				
+           </ul>
+					
+				</div>
+				
 					 
-					<div style ="padding: 25px 250px;"> <!--Playlist--->
-					<iframe width="144" height="100"
-						src="https://www.youtube.com/embed/tgbNymZ7vqY">
-					</iframe>
-				</div> <!--End of pLaylist ---> 
-				<div style ="padding: 25px 500px;"> <!--Playlist--->
-					<iframe width="144" height="100"
-						src="https://www.youtube.com/embed/tgbNymZ7vqY">
-					</iframe>
-				</div> <!--End of pLaylist ---> 
+					
+
+		</div>  <!--playlist div end -->
 
 		</div> <?Php // 4th div close  // video div end comment box start ; //comment correction 17-09?>
 
